@@ -169,4 +169,8 @@ class Vector2D
   def negate
     multiply_scalar(-1)
   end
+
+  def to_s
+    "#{@x}:#{@y}"
+  end
 end

@@ -1,0 +1,28 @@
+vector2d-ruby
+=============
+
+A class for working with two dimensional vectors.
+
+```ruby
+require 'vector2d'
+
+def print_my_vector vector
+  puts "#{vector}, magnitude: #{vector.magnitude}, angle: #{vector.get_angle}"
+end
+
+a = Vector2D.new(3,10)
+print_my_vector a
+# 3:10, magnitude: 10.44030650891055, angle: 1.2793395323170296
+
+b = a.normalize
+print_my_vector b
+# 0.2873478855663454:0.9578262852211513, magnitude: 0.9999999999999999, angle: 1.2793395323170296
+
+c = b.multiply_scalar(3)
+print_my_vector c
+# 0.8620436566990362:2.873478855663454, magnitude: 2.9999999999999996, angle: 1.2793395323170296
+
+d = c.rotate(Math::PI)
+print_my_vector d
+# -0.8620436566990365:2.873478855663454, magnitude: 2.9999999999999996, angle: 1.8622531212727638
+```
