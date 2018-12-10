@@ -75,7 +75,7 @@ class Vector2D
   end
 
   def distance(vector)
-    Math.sqrt(((@x - vector.x) + (@y - vector.y))**2)
+    Math.sqrt((@x - vector.x)**2 + (@y - vector.y)**2)
   end
 
   def dot(vector)
